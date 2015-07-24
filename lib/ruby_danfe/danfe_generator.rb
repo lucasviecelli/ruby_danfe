@@ -239,7 +239,7 @@ module RubyDanfe
 
     def render_produtos
       @pdf.font_size(6) do
-        @pdf.itable(6.37, 21.50, 0.25, 18.17,
+        #@pdf.itable 6.37, 21.50, 0.25, 18.17,
           @xml.collect('xmlns', 'det')  { |det|
             [
               det.css('prod/cProd').text, #I02
@@ -280,7 +280,7 @@ module RubyDanfe
             table.column(6..13).style(:align => :right)
             table.column(0..13).border_width = 1
             table.column(0..13).borders = [:bottom]
-          end)
+          end
       end
     end
   end
