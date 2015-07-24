@@ -256,7 +256,7 @@ module RubyDanfe
               Helper.numerify(det.css('ICMS/*/vICMS').text), #N17
               Helper.numerify(det.css('IPI/*/vIPI').text), #O14
               Helper.numerify(det.css('ICMS/*/pICMS').text), #N16
-              Helper.numerify(det.css('IPI/*/pIPI').text rescue '')  #O13 
+              Helper.numerify(det.css('IPI/*/pIPI').text || '0')  #O13 
             ]
           },
           :column_widths => {
